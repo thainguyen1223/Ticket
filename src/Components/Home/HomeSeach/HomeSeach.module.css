@@ -1,0 +1,34 @@
+.home___top{
+    display: flex;
+    justify-content: space-between;
+}
+.home__seach{
+    position: relative;
+}
+.home__seach input{
+    padding: 10px 16px;   
+    background: #EDEDED;    
+    border: 1.5px solid  #EDEDED;;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 380px;
+    height: 44px;
+}
+.logo__seach{
+    position: absolute;
+    height: 18px;
+    width: 24px;
+    left: 340px;
+    top:14px
+}
+
+.home__information{
+    display:  flex;
+    margin-right: 30px;
+}
+.logo__bell{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+

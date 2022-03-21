@@ -1,0 +1,338 @@
+.change__ticket{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    padding-left: 20px;
+}
+
+.ticket{
+    display: flex;
+    justify-content: space-between;
+    height: 94%;
+}
+.ticket__left{
+    margin-top: 10px;
+    width: 60%;
+  
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #1E0D03;
+}
+.ticket__titlelist{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.ticket__seach{
+    position: relative;
+}
+.ticket__seach input{
+    padding: 10px 16px;   
+    background: #EDEDED;    
+    border: 1.5px solid  #EDEDED;;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 360px;
+    height: 44px;
+}
+.logo__seach{
+    position: absolute;
+    height: 18px;
+    width: 24px;
+    left: 320px;
+    top:14px
+}
+
+.ticket__item{
+
+   
+    width: 150px;
+    height: 27px;
+    display: flex;
+    /* line-height: 29px; */
+
+}
+
+.ticket__title{
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 150px;
+    height: 47px;
+    background: #FF993C;
+}
+.title__change{
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.title_expot{
+    color: #FF993C;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.ticket__expot{
+    border: 1px solid #FF993C;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 150px;
+    height: 47px;
+
+}
+.ticket__table{
+    margin-top: 30px;
+    height: 810px;
+}
+
+th{
+    /* background-color:#F1F4F8; */
+    text-align: left;
+
+}
+tr{
+    border-radius: 8px 8px 0px 0px;
+}
+th, td {
+    padding: 8px 10px;
+  }
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+  }
+    
+  .color:nth-child() {
+    background-color: #F1F4F8;
+}
+
+
+.table__list{
+    width: 100%;
+    position: relative;
+
+}
+
+
+.page{
+    width: 100%;
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.ticket__right{
+    width: 34%;
+    margin-top: 10px;
+
+    background: #FFFFFF;
+    border-radius: 24px;
+    margin-right: 22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.item__ticket{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1E0D03;
+    padding:10px 20px 10px 20px;
+   
+}
+.ticket__container{
+    display: flex;
+    padding-left: 20px;
+}
+
+.container__title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #1E0D03;
+    opacity: 0.8;
+}
+
+.container__title:nth-child(2){
+    margin-left: 40px;
+}
+
+.radio__checkid{
+    display: flex;
+    text-align: center;
+    height: 40px;
+    width: 140px;
+    position: relative;
+}
+
+input[type='radio']{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #27AEF9;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    display: block;
+}
+
+input[type='radio']:checked:before{
+    background:#27AEF9;
+   
+}
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 2px 2px;
+    border-radius: 50%;    
+  }
+
+  .container__ticket{
+      display: flex;
+      padding-left: 20px;
+      margin-top: 20px;
+      align-items: center;
+  }
+
+  .ticket__type{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;  
+    color: #1E0D03;
+    opacity: 0.8;
+  }
+
+.ticket__gate{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1E0D03;  
+    opacity: 0.7;
+    
+}
+.ticket__gate:nth-child(2){
+    margin-left: 125px;
+}
+
+.ticket__calendar:nth-child(2){
+    margin-left: 120px;
+}
+
+
+.ticket__calendar input{
+    background: #E0E0E0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 136px;
+    border:  1px solid #E0E0E0;
+}
+
+.value{
+    color: #A5A8B1;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.ticket__calendar:before{
+    content: '' !important;
+    position: absolute !important;
+    background-image: url(../../image/black__calendar.svg) !important;
+    width: 19px !important;
+    height: 21px !important;
+    top: 293px;
+    left: 78%!important;
+
+    background-size: cover !important;
+    background-position: center !important;
+
+}
+.ticket__calendaron:nth-child(2){
+    margin-left: 110px;
+}
+.ticket__calendaron .react-datepicker-wrapper{
+    background: #F7F8FB;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 136px;
+    border:  1px solid #F7F8FB;
+}
+
+
+.ticket__calendaron .react-datepicker__input-container input{
+    background: #F7F8FB;
+    border-radius: 8px !important;
+    padding: 10px 12px!important;
+    width: 136px!important;
+    border:  1px solid #F7F8FB;
+}
+
+.ticket__calendaron:before{
+    content: '' !important;
+    position: absolute !important;
+    background-image: url(../../image/oragen__calendar.svg) !important;
+    width: 20px !important;
+    height: 22px !important;
+    top: 323px;
+    left: 73%!important;
+    z-index: 5 !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+}
+
+.container__fitter{
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FF993C;
+    margin: 50px 10px;
+    padding: 10px 8px;
+    border: 1px solid #FF993C;
+    background: transparent;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 20px;
+}

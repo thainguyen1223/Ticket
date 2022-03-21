@@ -1,0 +1,148 @@
+.home{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 20px;
+  
+}
+.home___bottom{
+    margin-top: 10px;
+    width: 97%;
+    height: 89%;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    color: #1E0D03;
+}
+.home__titlelist{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.title__safe{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1E0D03;
+}
+
+.Home__chartsafe{
+  
+}
+
+.total__week{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1E0D03;
+    opacity: 0.5;
+}
+.Home__coin{
+    margin-top: 20px;
+}
+.total__list{
+    display: flex;
+    align-items: flex-end;
+}
+
+.money{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1E0D03;
+}
+.coin{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1E0D03;
+    margin-left: 5px;
+}
+
+.package__list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+.package__calendar{
+
+}
+.package__use{
+    margin-right: 72px;
+    margin-top: 20px;
+}
+.chart_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.chartIMG{
+    animation: show 1.5s ease-in ;
+}
+.package__chart{
+    display: flex;
+}
+.chart_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1E0D03;
+}
+.use_item{
+    display: flex;
+    margin-bottom: -16px;
+}
+
+.use_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1E0D03;
+    margin-left: 5px;
+}
+@keyframes show{
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}
+.react-datepicker__input-container input {
+    border: 1px solid #E6E0E0 !important;
+    outline: none !important;
+    cursor: pointer !important;
+}
+.react-datepicker__input-container input {
+    padding: 4px !important;
+    border-radius: 8px !important;
+    width: 104px !important;
+}
