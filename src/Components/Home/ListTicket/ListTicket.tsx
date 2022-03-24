@@ -1,20 +1,20 @@
 import classes from './ListTicket.module.css'
-import HomeSeach from '../Home/HomeSeach/HomeSeach';
+import HomeSeach from '../HomeSeach/HomeSeach';
 import {useState, useEffect} from 'react';
-import logo_seach from '../image/logo_seach.svg'
+import logo_seach from '../../image/logo_seach.svg'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import logo_filter from '../image/logo_filter.svg';
-import {fetchData} from '../../redux/DataAlta/DataAltaActions';
-import red from '../image/red.svg';
-import green from '../image/green.svg';
-import black from '../image/black.svg';
+import logo_filter from '../../image/logo_filter.svg';
+import {fetchData} from '../../../redux/DataAlta/DataAltaActions';
+import red from '../../image/red.svg';
+import green from '../../image/green.svg';
+import black from '../../image/black.svg';
 import {connect} from 'react-redux';
 import ReactPaginate from 'react-paginate';
-import back from '../image/back.svg'
-import next from '../image/next.svg'
+import back from '../../image/back.svg'
+import next from '../../image/next.svg'
 
-import list from '../image/list.svg'
+import list from '../../image/list.svg'
 
 function ListTicket({dataTable,fetchData }:any){
     useEffect(() => {
@@ -24,7 +24,7 @@ function ListTicket({dataTable,fetchData }:any){
     const [search , setSeatch] = useState('')
     const [checked , setChecked]=useState(1)
     
-    const courses=[
+    const coursedata=[
         {
         id:1,
         name:'Tất cả'
@@ -73,40 +73,31 @@ function ListTicket({dataTable,fetchData }:any){
           ) 
     }
 
-
+    //showlist
+    const[showlist,setShowlist]=useState(false)
     const datalist = dataTable.dataTicket
 
 
     const [data , setData] = useState(datalist)
-    const [dataButton , setDataButton] = useState(courses[0].name)
+    const [dataButton , setDataButton] = useState(coursedata[0].name)
     const handleButton=()=>{
         if(dataButton=="Đã sử dụng"){
-            const show=datalist.filter( (value:any)=>{
-                return dataButton ==  value.status
-              })
-              setData(show)
-        }else if(dataButton=='Chưa sử dụng'){
-            const show=datalist.filter( (value:any)=>{
-                return dataButton == value.status
-              })
-              setData(show)
-        }else if(dataButton=='Hết hạn'){
-            const show=datalist.filter( (value:any)=>{
-                return dataButton == value.status
-              })
-              setData(show)
-              
-        }else if(dataButton == 'Tất cả'){
-            const show = dataTable.filter( (value:any)=>{
-              return dataButton == value.status
-            })
-          
+            const show =datalist.filter((item:any)=>item.status=="Đã sử dụng")
+            
             setData(show)
-          }
-        
-        else{
+            
+        }else if(dataButton=="Chưa sử dụng"){
+            const show =datalist.filter((item:any)=>item.status=="Chưa sử dụng")
+            setData(show)
+        }else if(dataButton=="Hết hạn"){
+            const show =datalist.filter((item:any)=>item.status=="Hết hạn")
+            setData(show)
+        }else if(dataButton=="Tất cả"){
+            const show =datalist.filter((item:any)=>item.status=="Tất cả")
+            setData(show)
+        } else{
             setData(datalist)
-          }
+        }
       
     }
 
@@ -136,26 +127,20 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
         </th>
         <th style={{opacity: '0.7'}}>{item.day}</th>
         <th style={{opacity: '0.7'}}>{item.nextday}</th>
-        <th style={{opacity: '0.7'}}>{
-                                       !item.checkid ?
-                         (
-            
-              <>
-                <span>-
-                
-                  <div >
-                      <img src={list} alt="" />
-                  </div>
-                </span>
-                
-              </>
-            
-          )
-          : 'Cổng 1'
-        }
+        <th style={{opacity: '0.7'}}>{item.checkid||
+
+                                    <div className={classes.ab} >
+                                        {item.checkid1}
+                                    
+                                    <div className={classes.list} onClick={() => setShowlist(true)}>
+                                        <img src={list} alt="" />
+                                     
+                                    </div>
+                                    </div>
+     }
         
         
-        </th>
+        </th>   
         </tr>
    
         )}
@@ -199,7 +184,7 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
                                         Tình trạng sử dụng
                                     </div>
                                     <div className={classes.list}>
-                                        {courses.map(course=>
+                                        {coursedata.map(course=>
                                             <div key={course.id} className={classes.radio__checkid}>
                                                 <input type="radio"
                                                 checked={checked==course.id}
@@ -326,8 +311,67 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
                     />
                     </div>
                 </div>
+
+                    { showlist &&  <div className={classes.modal}>
+                        <div className={classes.modal__item}>
+                            <div className={classes.modal__header}>
+                                Đổi ngày sử dụng vé
+                            </div>
+
+                            <div className={classes.modal__des}>
+                                <div className={classes.modal__des__heaer}>
+                                    Số vé
+                                </div>
+                            <div className={classes.modal__info}>PKG20210502</div>
+
+                            </div>
+                            <div className={classes.modal__des}>
+                                <div className={classes.modal__des__heaer}>
+                                    Số vé
+                                </div>
+                                <div className={classes.modal__info}>Vé cổng - Gói sự kiện</div>
+
+                                </div>
+
+                            <div className={classes.modal__des}>
+                                <div className={classes.modal__des__heaer}>
+                                    Tên sự kiện
+                                </div>
+                                <div className={classes.modal__info}>Hội trợ triển lãm hàng tiêu dùng 2021</div>
+
+                                </div>
+                            <div className={classes.modal__des}>
+                                <div className={classes.modal__des__heaer}>
+                                    Hạn sử dụng
+                                </div>
+                                <div className={classes.modal__des__calendar}> 
+                                    <DatePicker selected={startDate} onChange={(date:Date) => setStartDate(date)}   
+                                    />
+                                    </div>
+                                </div>
+
+                                <div className={classes.button__click} >
+                                    <div className={classes.button__cancle}>
+                                        <span className={classes.cancle__title} 
+                                        onClick={()=>setShowlist(false)}
+                                        >
+                                            Huỷ
+                                        </span>
+                                    </div>
+                                    <div className={classes.button__accpect}>
+                                        <span className={classes.accpect__title}>
+                                            Lưu
+                                        </span>
+                                    </div>
+                                </div>
+                                        </div>
+                                        </div>}
             </div>
+
+
         </div>
+
+        
     )   
 }
 

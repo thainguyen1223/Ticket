@@ -46,10 +46,12 @@ function ListSliderBar(){
                 <div className={classes.list__title}>Đối soát vé</div>
             </div>
             </Link>
+            <Link to="/event " className={classes.link}>
             <div className={classes.list__item}>
                 <img src={logo_list} alt='logo_list' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Danh sách sự kiện</div>
             </div>
+            </Link>
             <div className={classes.list__item}>
                 <img src={logo_sevice} alt='logo_sevice' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Quản lý thiết bị</div>

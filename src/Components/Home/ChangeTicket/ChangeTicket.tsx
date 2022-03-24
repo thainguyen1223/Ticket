@@ -89,7 +89,7 @@ function ChangeTicket({dataTable,fetchData }:any){
                 <td  style={{fontStyle:'italic',color: '#A5A8B1'}}>
             
               
-                {item.state ='  Chưa đổi soát'?(              
+                {item.state =' Chưa đổi soát'?(              
                     <td style={{fontStyle:'italic',color: '#A5A8B1'}}>
                         Chưa đổi soát
                     </td>
@@ -97,7 +97,7 @@ function ChangeTicket({dataTable,fetchData }:any){
                 ):(
                    
                     <td style={{fontStyle:'italic',color: '#FD5959'} }>
-                    Đã đổi soát
+                      Chưa đổi soát
                     </td>
                  )
                 }

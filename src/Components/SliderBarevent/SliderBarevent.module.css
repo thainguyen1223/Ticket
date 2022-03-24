@@ -1,0 +1,89 @@
+.sliderbar{
+    margin-top: 20px;
+    width: 20%;
+    max-width: 20%;
+    background: #E5E5E5;
+    justify-content: space-between;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.insightIMG{
+    height: 58px;
+    width: 133px;
+}
+
+.list__Sliderbar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.list{
+    height: 572px;
+}
+
+.list__title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+
+}
+.list__item{
+    display: flex;
+    padding: 15px 16px 15px 25px;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.logo_IMG{
+    margin-right: 12px;
+}
+
+.list__item:hover{
+    background: #FFB800;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logo_IMG:hover{
+    color: #FFFFFF;
+    
+}
+.link{
+    text-decoration: none;
+    color: #1E0D03;
+  
+  }
+.active{
+    background: #FFB800;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.list__item1{
+    display: flex;
+    margin-left: 10px;
+    padding: 9px 16px 15px 70px;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title{
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.titleIMG{
+    margin-left: 6px;
+}
+
+
