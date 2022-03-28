@@ -91,6 +91,7 @@
     height: 47px;
     background: #FF993C;
     margin-left: 20px;
+    position: relative;
 }
 
 .title__add{
@@ -211,9 +212,9 @@ table, th, td {
     border-radius: 16px;
     z-index: 2;
     position: absolute;
-    left: 65%;
+    left: -540px;
     padding: 40px;
-    top: 21%;
+    top: 52px;
     display: flex;
     flex-direction: column;
 }

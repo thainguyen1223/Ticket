@@ -130,9 +130,9 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
         <th style={{opacity: '0.7'}}>{item.checkid||
 
                                     <div className={classes.ab} >
-                                        {item.checkid1}
+                                          <div className={classes.checklist} >{item.checkid1}</div>   
                                     
-                                    <div className={classes.list} onClick={() => setShowlist(true)}>
+                                    <div  className={classes.list}  onClick={() => setShowlist(true)}>
                                         <img src={list} alt="" />
                                      
                                     </div>
@@ -270,7 +270,7 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
                                             </div>
                                         </div>
                             </div>
-                              }
+}
                         </div>
                                       
                         <div className={classes.ticket__item}>

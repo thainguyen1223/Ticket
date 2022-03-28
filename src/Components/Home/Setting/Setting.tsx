@@ -98,7 +98,7 @@ function Setting({dataTable,fetchData }:any){
                             <p className={classes.title__expot}> Xuất file (.csv)</p>
                         </div>
                         <div className={classes.setting__add}>
-                            <p className={classes.title__add} onClick={()=>setIsshow(!isshow)}> Thêm gói vé</p>
+                            <p className={classes.title__add} onMouseEnter={()=>setIsshow(!isshow)}> Thêm gói vé</p>
                             {isshow &&<div className={classes.list__add}>
                                 <p className={classes.list__title}>Thêm gói vé </p>
                                 <div className={classes.list__name}>

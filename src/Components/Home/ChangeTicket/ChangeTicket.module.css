@@ -223,6 +223,7 @@ input[type='radio']:before {
       padding-left: 20px;
       margin-top: 20px;
       align-items: center;
+      position: relative;
   }
 
   .ticket__type{
@@ -273,16 +274,16 @@ input[type='radio']:before {
 }
 
 .ticket__calendar:before{
-    content: '' !important;
-    position: absolute !important;
-    background-image: url(../../image/black__calendar.svg) !important;
-    width: 19px !important;
-    height: 21px !important;
-    top: 293px;
-    left: 78%!important;
+    content: '';
+    position: absolute ;
+    background-image: url(../../image/black__calendar.svg) ;
+    width: 19px ;
+    height: 21px;
+    top: 10px;
+    left: 324px;
 
-    background-size: cover !important;
-    background-position: center !important;
+    background-size: cover ;
+    background-position: center;
 
 }
 .ticket__calendaron:nth-child(2){

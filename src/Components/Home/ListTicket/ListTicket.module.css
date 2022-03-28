@@ -232,7 +232,7 @@ input[type='radio']:before {
     display: block;
     width: 18px;
     height: 18px;
-    margin: 2px 2px;
+    margin: 2px auto;
     border-radius: 50%;    
   }
 
@@ -422,12 +422,16 @@ table, th, td {
 .ab{
     position: relative;
     display: flex;
-    justify-content: center;
-    width: 150%;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+    
 }
-
+.checklist{
+    margin-right: 96px;
+}
 .list{
-    margin-left: 82px
+
 }
 
 .modal{

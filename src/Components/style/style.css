@@ -25,7 +25,11 @@
     background-size: cover !important;
     background-position: center !important;
 }
-
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+    border-radius: 50% !important;
+    background-color: #FFBA7B !important;
+    color: #fff !important;
+}
 .react-datepicker-wrapper {
     display: inline-block;
     padding: 0;

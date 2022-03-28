@@ -38,28 +38,40 @@ function ChangeTicket({dataTable,fetchData }:any){
     const [checked,setChecked]=useState(1)  
     const [dataButton , setDataButton] = useState(datacourse[0].name)
     const handleButton=()=>{
-        if(dataButton=="Đã đối soát"){
-            const show=datalist.filter( (value:any)=>{
-                return dataButton ==  value.state
-              })
-              setData(show)
-              setShowButton (false)
-              
-        }else if(dataButton=='Chưa đối soát'){
-            const show=datalist.filter( (value:any)=>{
-                return dataButton == value.state
-              })
-              setData(show)
-              setShowButton (true)
+        if(dataButton == 'Đã đối soát'){
+            const dataShow = datalist.filter( (item:any)=>{
+              return dataButton == item.state1
+            })
     
-            }
+            setData(dataShow)
+            setShowButton(true)
+    
+           
+            
+        }else if(dataButton == 'Chưa đối soát'){
+          const dataShow = datalist.filter( (item:any)=>{
+            return dataButton == item.state
+          })
+    
+         setData(dataShow)
+          setShowButton(false)
+    
+         
+          
+      }
+     
         
         else{
-            setData(datalist)
-          }
+         setData(datalist)
+        }
+    
+        
+     
       
-    }
-
+            
+        
+      }
+           
     const handleRadio=(value:any)=>{
         setDataButton(value)
     }
@@ -86,22 +98,19 @@ function ChangeTicket({dataTable,fetchData }:any){
                 <td style={{opacity: '0.7'}}>{item.day}</td>   
                 <td style={{opacity: '0.7'}}>{item.name}</td> 
                 <td style={{opacity: '0.7'}}>{item.checkid}</td>
-                <td  style={{fontStyle:'italic',color: '#A5A8B1'}}>
-            
-              
-                {item.state =' Chưa đổi soát'?(              
+    
+                {
+                  item.state=='Chưa đối soát' ? (
                     <td style={{fontStyle:'italic',color: '#A5A8B1'}}>
-                        Chưa đổi soát
-                    </td>
-                    
-                ):(
-                   
-                    <td style={{fontStyle:'italic',color: '#FD5959'} }>
-                      Chưa đổi soát
-                    </td>
-                 )
-                }
+                    Chưa đối soát
                 </td>
+                    ) : (
+                <td style={{fontStyle:'italic',color: '#FD5959'}}>
+                    Đã đối soát
+                </td>
+                  )
+              }
+             
             </tr>
        
             )}
