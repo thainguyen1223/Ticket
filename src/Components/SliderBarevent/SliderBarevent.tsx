@@ -16,13 +16,13 @@ import { useState } from 'react'
 
 function SliderBarevent(){
 
-    const onactives= document.querySelectorAll('.SliderBar_list__item__ykd-V')
+    const onactives= document.querySelectorAll('.SliderBarevent_list__item__Lsty8')
     onactives.forEach( (onactive:any) => {
     onactive.onclick=function(){
-        let items = document.querySelector<HTMLElement>('.SliderBar_list__item__ykd-V.SliderBar_active__1DhfC')!
-        items.classList.remove('SliderBar_active__1DhfC')
+        let items = document.querySelector<HTMLElement>('.SliderBarevent_list__item__Lsty8.SliderBarevent_active__X3kMt')!
+        items.classList.remove('SliderBarevent_active__X3kMt')
     
-    this.classList.add('SliderBar_active__1DhfC')
+    this.classList.add('SliderBarevent_active__X3kMt')
     
     }   
 })
@@ -70,7 +70,7 @@ const handleLogosetting = ( ) => {
                 </Link>
             </div>    
             <div className={classes.list__Sliderbar}>
-            <Link to="/home" className={classes.link}>
+            <Link to="/event" className={classes.link}>
             <div className={`${classes.list__item} ${classes.active}` }onClick={handleLogoHome}>
                
                     <img src={isShow ? logo_home : unlogo_home} alt='logo_home' className={classes.logo_IMG}  ></img>
@@ -78,21 +78,21 @@ const handleLogosetting = ( ) => {
                 <div className={classes.list__title}>Trang chủ</div>
             </div> 
             </Link>
-            <Link to="/List__ticket" className={classes.link}>
+            <Link to="/event/List__ticket" className={classes.link}>
             <div className={classes.list__item}
                 onClick={handleLogoticket} >
                 <img src={isShowticket? logo_ticket :unlogo_ticket} alt='logo_home' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Quản lý vé</div>
             </div>
             </Link>
-            <Link to="/Change__ticket" className={classes.link}>
+            <Link to="/event/Change__ticket" className={classes.link}>
             <div className={classes.list__item}
                 onClick={handleLogochecking}>
                 <img src={isShowchecking ? logo_checking : unlogo_checking} alt='logo_home' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Đối soát vé</div>
             </div>
             </Link>
-            <Link to="/Setting" className={classes.link}
+            <Link to="/event/Setting" className={classes.link}
              onClick={handleLogosetting}>
             <div className={classes.list__item}>
                 <img src={isShowsetting ? logo_setting : unlogo_setting} alt='logo_home' className={classes.logo_IMG}></img>

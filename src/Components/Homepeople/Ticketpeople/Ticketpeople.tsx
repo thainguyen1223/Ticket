@@ -1,5 +1,5 @@
-import classes from './ListTicket.module.css'
-import HomeSeach from '../HomeSeach/HomeSeach';
+import classes from './Ticketpeople.module.css'
+
 import {useState, useEffect} from 'react';
 import logo_seach from '../../image/logo_seach.svg'
 import DatePicker from "react-datepicker";
@@ -16,7 +16,7 @@ import next from '../../image/next.svg'
 
 import list from '../../image/list.svg'
 
-function ListTicket({dataTable,fetchData }:any){
+function Ticketpeople({dataTable,fetchData }:any){
     useEffect(() => {
         fetchData();
       }, []);
@@ -114,9 +114,9 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
     return(
         <tr key={index} className={classes.ticket__list}>
         <th style={{opacity: '0.7'}}>{item.stt}</th>
-        <th style={{opacity: '0.7'}}>ALT20210501</th>
+        <th style={{opacity: '0.7'}}>{item.code}</th>
         <th style={{opacity: '0.7'}}>{item.number}</th>
-        <th style={{opacity: '0.7'}}>Hội chợ triển lãm tiêu dùng 2021</th>
+     
         <th style={{ width: 17  }}>
         {
                 item.status =='Đã sử dụng' && <ServiceWaitPoint/> ||
@@ -149,7 +149,7 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
     return(
         <div className={classes.list__ticket}>
             <div className={classes.ticket__top}>
-                <HomeSeach/>
+               
             </div>
             <div className={classes.ticket__bottom}>
                 <div className={classes.title}>Danh sách vé</div>
@@ -285,7 +285,7 @@ const displayUsers =data.slice(pagesVisited, pagesVisited + usersPrePage) .map((
                             <th>STT</th>
                             <th>Booking code</th>
                             <th>Số vé</th>
-                            <th>Tên sự kiện</th>
+                      
                             <th style={{ width: 17 + '%' }}>Tình trạng sử dụng</th>
                             <th>Ngày sử dụng</th>
                             <th>Ngày xuất vé</th>
@@ -394,4 +394,4 @@ const mapStateToProps = (state:any) =>{
   }
   
   
-  export default connect(mapStateToProps,mapDispatchToProps)(ListTicket);
+  export default connect(mapStateToProps,mapDispatchToProps)(Ticketpeople);

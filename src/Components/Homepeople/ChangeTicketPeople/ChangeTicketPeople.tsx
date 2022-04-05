@@ -1,5 +1,5 @@
-import classes from './ChangeTicket.module.css'
-import HomeSeach from '../HomeSeach/HomeSeach';
+import classes from './ChangeTicketPeople.module.css'
+
 import {useState, useEffect} from 'react';
 import logo_seach from '../../image/logo_seach.svg'
 import {connect} from 'react-redux';
@@ -10,7 +10,7 @@ import next from '../../image/next.svg'
 import DatePicker from "react-datepicker";
 import '../../style/style.css'
 
-function ChangeTicket({dataTable,fetchData }:any){
+function ChangeTicketPeople({dataTable,fetchData }:any){
     useEffect(() => {
         fetchData();
       }, []);
@@ -94,9 +94,8 @@ function ChangeTicket({dataTable,fetchData }:any){
       const displayUsers =data .slice(pagesVisited, pagesVisited + usersPrePage) .map((item:any,index:any) => {
         return(
             <tr key={index} className={classes.ticket__list}>
-                <td style={{opacity: '0.7'}}>{index+1}</td>
-                <td style={{opacity: '0.7'}}>{item.number}</td>   
-                <td style={{opacity: '0.7'}}>Hội chợ triển lãm tiêu dùng 2021</td>
+                <td style={{opacity: '0.7'}}>{item.stt}</td>
+                <td style={{opacity: '0.7'}}>{item.number}</td>      
                 <td style={{opacity: '0.7'}}>14/04/2021</td>   
                 <td style={{opacity: '0.7'}}>Vé cổng</td> 
                 <td style={{opacity: '0.7'}}>Cổng 1</td>
@@ -120,7 +119,7 @@ function ChangeTicket({dataTable,fetchData }:any){
     return(
         <div className={classes.change__ticket}>
             <div className={classes.ticket__top}>
-                <HomeSeach/>
+          
             </div>
             <div className={classes.ticket}>
                 <div className={classes.ticket__left}>
@@ -152,7 +151,6 @@ function ChangeTicket({dataTable,fetchData }:any){
                             <tr   >
                             <td>STT</td>
                             <td >Số vé</td>
-                            <td >Tên sự kiện</td>
                             <td>Ngày sử dụng</td>
                             <td>Tên loại vé</td>
                             <td>Cổng check - in</td>
@@ -262,4 +260,4 @@ const mapStateToProps = (state:any) =>{
   }
   
   
-  export default connect(mapStateToProps,mapDispatchToProps)(ChangeTicket);
+  export default connect(mapStateToProps,mapDispatchToProps)(ChangeTicketPeople);

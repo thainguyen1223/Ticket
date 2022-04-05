@@ -1,4 +1,4 @@
-import classes from './SliderBar.module.css'
+import classes from './SliderBarpeople.module.css'
 import insight from '../image/insight.svg'
 import logo_ticket from '../image/logo_ticket.svg'
 import logo_home from '../image/logo_home.svg'
@@ -14,14 +14,14 @@ import alta from '../image/2020 Alta Software.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-    function SliderBar(){
-        const onactives= document.querySelectorAll('.SliderBar_list__item__ykd-V')
+    function SliderBarpeople(){
+        const onactives= document.querySelectorAll('.SliderBarpeople_list__item__6Q56z')
             onactives.forEach( (onactive:any) => {
             onactive.onclick=function(){
-                let items = document.querySelector<HTMLElement>('.SliderBar_list__item__ykd-V.SliderBar_active__1DhfC')!
-                items.classList.remove('SliderBar_active__1DhfC')
+                let items = document.querySelector<HTMLElement>('.SliderBarpeople_list__item__6Q56z.SliderBarpeople_active__fG55r')!
+                items.classList.remove('SliderBarpeople_active__fG55r')
             
-            this.classList.add('SliderBar_active__1DhfC')
+            this.classList.add('SliderBarpeople_active__fG55r')
             
             }   
         })
@@ -71,7 +71,7 @@ import { useState } from 'react'
                         </Link>
                     </div>    
                     <div className={classes.list__Sliderbar}>
-                    <Link to="/home" className={classes.link}>
+                    <Link to="/homepeople" className={classes.link}>
                     <div className={`${classes.list__item} ${classes.active}` }onClick={handleLogoHome}>
                        
                             <img src={isShow ? logo_home : unlogo_home} alt='logo_home' className={classes.logo_IMG}  ></img>
@@ -79,21 +79,21 @@ import { useState } from 'react'
                         <div className={classes.list__title}>Trang chủ</div>
                     </div> 
                     </Link>
-                    <Link to="/List__ticket" className={classes.link}>
+                    <Link to="/List__ticket_people" className={classes.link}>
                     <div className={classes.list__item}
                         onClick={handleLogoticket} >
                         <img src={isShowticket? logo_ticket :unlogo_ticket} alt='logo_home' className={classes.logo_IMG}></img>
                         <div className={classes.list__title}>Quản lý vé</div>
                     </div>
                     </Link>
-                    <Link to="/Change__ticket" className={classes.link}>
+                    <Link to="/Change__ticket_people" className={classes.link}>
                     <div className={classes.list__item}
                         onClick={handleLogochecking}>
                         <img src={isShowchecking ? logo_checking : unlogo_checking} alt='logo_home' className={classes.logo_IMG}></img>
                         <div className={classes.list__title}>Đối soát vé</div>
                     </div>
                     </Link>
-                    <Link to="/Setting" className={classes.link}
+                    <Link to="/Setting__people" className={classes.link}
                      onClick={handleLogosetting}>
                     <div className={classes.list__item}>
                         <img src={isShowsetting ? logo_setting : unlogo_setting} alt='logo_home' className={classes.logo_IMG}></img>
@@ -116,4 +116,4 @@ import { useState } from 'react'
     }
 
 
-    export default SliderBar
+    export default SliderBarpeople

@@ -27,20 +27,20 @@ function ListSliderBar(){
                 </Link>
             </div>    
             <div className={classes.list__Sliderbar}>
-            <Link to="/home" className={classes.link}>
+            <Link to="/homepeople" className={classes.link}>
             <div className={classes.list__item}>
                     <img src={ logo_home } alt='logo_home' className={classes.logo_IMG}  ></img>
                 
                 <div className={classes.list__title}>Trang chủ</div>
             </div> 
             </Link>
-            <Link to="/List__ticket" className={classes.link}>
+            <Link to="/event/List__ticket" className={classes.link}>
             <div className={classes.list__item} >
                 <img src={logo_ticket} alt='logo_ticket' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Quản lý vé</div>
             </div>
             </Link>
-            <Link to="/Change__ticket" className={classes.link}>
+            <Link to="/event/Change__ticket" className={classes.link}>
             <div className={classes.list__item}>
                 <img src={logo_checking} alt='logo_checking' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Đối soát vé</div>
@@ -56,7 +56,7 @@ function ListSliderBar(){
                 <img src={logo_sevice} alt='logo_sevice' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Quản lý thiết bị</div>
             </div>
-            <Link to="/Setting" className={classes.link}>
+            <Link to="/event/Setting" className={classes.link}>
             <div className={classes.list__item}>
                 <img src={logo_setting} alt='logo_setting' className={classes.logo_IMG}></img>
                 <div className={classes.list__title}>Cài đặt</div>
